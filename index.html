@@ -344,7 +344,7 @@
   .centertip { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; background: var(--gold-tint); border: 1.5px solid var(--gold); border-radius: 14px; padding: 13px 16px; margin: 0 0 16px; font-size: .9rem; line-height: 1.5; }
   .centertip .ctext { flex: 1 1 360px; }
   .centertip select { flex: 0 1 280px; font: inherit; font-size: .88rem; font-weight: 600; color: var(--text); background: var(--surface); border: 1.5px solid var(--gold); border-radius: 10px; padding: 9px 10px; min-width: 0; width: 100%; max-width: 320px; }
-  p.stagehint { font-size: 1rem; font-weight: 600; color: var(--text); background: var(--surface); border: 1.5px solid var(--border); border-radius: 999px; padding: 10px 18px; margin: 22px auto 0; width: fit-content; max-width: 100%; text-align: center; box-shadow: var(--shadow); }
+  p.stagehint { font-size: 1rem; font-weight: 600; color: var(--text); background: var(--surface); border: 1.5px solid var(--border); border-radius: 14px; padding: 10px 18px; margin: 22px auto 0; width: fit-content; white-space: pre-line; line-height: 1.5; max-width: 100%; text-align: center; box-shadow: var(--shadow); }
   .card .setdef { margin-top: 8px; text-align: center; font-size: .8rem; color: var(--text-soft); }
 </style>
 
@@ -636,7 +636,7 @@ var DATA = {"captured": "September 29, 2026", "zones": {"impl": {"name": "Implem
     resetBtn.hidden = state.center === HUB;
     pathBtn.classList.toggle("active", state.pathOn);
     hint.textContent = po ? "The dashed line follows the client's path in order. Pick specific partners in each step to place them on the wheel."
-      : (state.open ? "Showing only " + ZONES[state.open].name + ". Click the " + ZONES[state.open].short + " circle again to close it and see every category." : "Click any category to open it.");
+      : (state.open ? "Showing only " + ZONES[state.open].name + ".\nClick any company to open its card, which shows what they do, their best-fit client, pricing, flags and sources.\nClick the " + ZONES[state.open].short + " circle again to close it and see every category." : "Click any category to open it.");
   }
 
   function nodeEl(n, p, isHub, z, seqs){
